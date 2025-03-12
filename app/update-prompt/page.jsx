@@ -1,6 +1,6 @@
 'use client';
 import { From } from "@/components/From";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const UpdatePrompt = () => {
@@ -48,14 +48,16 @@ const UpdatePrompt = () => {
     }
   }
   return (
-    <From 
-      type="Update "
-      post={post}
-      setPost={setPost}
-      submitting={submitting}
-      handleSubmit={updatePrompt}
-      >
-    </From>
+    <Suspense>
+       <From 
+        type="Update "
+        post={post}
+        setPost={setPost}
+        submitting={submitting}
+        handleSubmit={updatePrompt}
+        >
+      </From>
+    </Suspense>
   )
 }
 

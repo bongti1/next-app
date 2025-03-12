@@ -18,9 +18,9 @@ const Layout = ({children}) => {
             */}
               <main className="app">
                 <Navbar></Navbar>
-                <Suspense>
-                {children}
-                </Suspense>
+                  <Suspense>
+                    {children}
+                  </Suspense>
               </main>
             </Provider>
         </body>
