@@ -54,7 +54,7 @@ const UpdatePrompt = () => {
         post={post}
         setPost={setPost}
         submitting={submitting}
-        handleSubmit={updatePrompt}
+        handleSubmit={<Suspense>{updatePrompt}</Suspense>}
         >
       </From>
     </Suspense>
